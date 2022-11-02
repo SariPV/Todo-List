@@ -1,0 +1,54 @@
+<mat-card class="card">
+  <mat-card-title class="title">TO-DO LIST </mat-card-title>
+
+  <div class="field">
+    <input placeholder="Add New Todo List here..." #task />
+
+    <div class="example-button-row">
+      <button
+        type="button"
+        (click)="addTask(task.value)"
+        class="add-btn"
+        color="primary">
+        ADD
+      </button>
+    </div>
+  </div>
+
+  
+  {{ getItem() }}
+
+  <div class="side-border"></div>
+  <mat-card class="item-list" *ngFor="let items of itemList">
+
+    <mat-checkbox
+      [checked]="items.isCompleted == 2"
+      (click)="changeStatus(items)"
+      class="checkbox"></mat-checkbox>
+
+    <mat-list-item *ngIf="tasks" class="task-item">
+      {{ items.title }}
+    </mat-list-item>
+
+    <mat-icon (click)="deleteTask(items)" class="delete-items align-right">highlight_off</mat-icon>
+    <mat-icon (click)="openDialog()" class="edit-items">edit</mat-icon>
+
+    <ng-template #callAPIDialog >
+      <form #edittodoForm="ngForm" (ngSubmit)="onSend(edittodoForm)" novalidate>
+        <h2 matDialogTitle>Edit Todo-Item</h2>
+        <input type="hidden" name="todoitemid" [(ngModel)]="items.id" required />
+        <input
+          
+          name="todoitem"
+          [(ngModel)]="items.title"
+          required/>
+
+        <mat-dialog-actions>
+          <button mat-button matDialogClose="no">Cancel</button>
+          <button type="submit" mat-button>Save</button>
+        </mat-dialog-actions>
+      </form>
+    </ng-template>
+  </mat-card>
+
+</mat-card>

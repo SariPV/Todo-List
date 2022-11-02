@@ -1,0 +1,140 @@
+.card{
+    
+    margin: 100px;
+    left: 10px;
+    width: auto;
+   
+ 
+}
+.title{
+    text-align: center;
+    background: linear-gradient(90deg, rgba(102,129,234,1) 0%, rgba(126,67,170,1) 57%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px;
+    color: #fff;
+    font-size: 24px;
+    margin-bottom:20px ;
+}
+h2{
+    color:rgba(126,67,170,1);
+}
+.field{
+    display: flex;
+   
+    
+}
+.example-button-row{
+    margin-left:5px
+}
+
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+  
+.example-full-width {
+    width: 100%;
+   
+    
+}
+input{
+    height: 30px;
+    width: 100%;
+    font-size: 14px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+
+}
+input:hover{
+    
+    border-color: rgb(197, 199, 244);
+}
+.add-btn{
+    background-color: rgb(133, 138, 231) ;
+    border: none;
+    height: 35px;
+    color: aliceblue;
+    border-radius: 4px;
+    font-size: 14px;
+
+
+}
+.add-btn:hover{
+    background-color: aliceblue;
+    color: rgb(133, 138, 231);
+}
+.item-list{
+    padding-top: 20px;
+    box-shadow: none;
+   display: flex;
+    border-radius: 0;
+    width: auto;
+    flex-direction: row;
+    align-items: center; 
+    border-bottom: 1px solid rgb(133, 138, 231);
+    
+}
+
+.item-list:hover{
+    background-color:  rgb(206, 208, 244); 
+    background-color: rgba(218, 218, 218, 0.508);
+    border-bottom: 1px solid rgb(133, 138, 231);
+    /* color: aliceblue; */
+}
+
+.side-border{
+    width: 20px;
+    padding: 0;
+   
+   
+    background-color: blueviolet;
+}
+
+.checkbox{
+    margin-right: 20px;
+    border-radius: 50% !important;
+    border: none;
+  
+}
+
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: rgb(138, 144, 255) !important;
+  color: black;
+  border: none;
+  
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background  {
+    background-color: rgb(138, 144, 255)!important;
+    color: black;
+    border: none;
+   
+
+}
+.delete-items{
+    color: red;
+    width: 40%;
+    position: absolute;
+    /* margin-bottom: 90%; */
+    margin-left: 70%;
+    /* float: right; */
+    
+  
+
+}
+.edit-items{
+    color: rgb(18, 18, 18);
+    width: 40%;
+    position: absolute;
+    /* margin-bottom: 90%; */
+    margin-left: 80%
+    /* float: right; */
+    
+  
+
+}
